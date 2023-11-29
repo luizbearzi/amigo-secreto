@@ -33,11 +33,6 @@ function sortear() {
    }
 }
 
-function reiniciar() {
-    nomeDoAmigo.value = '';
-    listaDosAmigos.value = '';
-}
-
 function embaralha(amigosNaLista) { // este código de embaralhar array está disponivel na net(fisher-yeates) 
 
     for (let indice = amigosNaLista.length; indice; indice--) {
@@ -48,4 +43,10 @@ function embaralha(amigosNaLista) { // este código de embaralhar array está di
         [amigosNaLista[indice - 1], amigosNaLista[indiceAleatorio]] = 
             [amigosNaLista[indiceAleatorio], amigosNaLista[indice - 1]];
     }
+}
+
+function reiniciar() {
+    amigosNaLista = [];
+    document.getElementById('lista-amigos').innerHTML = '';
+    document.getElementById('lista-sorteio').innerHTML = '';
 }
