@@ -19,7 +19,18 @@ function adicionar() {
 
 function sortear() {
     embaralha(amigosNaLista);
-    
+
+    let sorteio = document.getElementById('lista-sorteio');
+
+   for (let i = 0; i < amigosNaLista.length; i++) {
+
+    if (i == amigosNaLista.length - 1) {
+        sorteio.innerHTML = sorteio.innerHTML +  amigosNaLista[i] + ' --> ' + amigosNaLista[0] + '<br>';
+    } else {
+        sorteio.innerHTML = sorteio.innerHTML +  amigosNaLista[i] + ' --> ' + amigosNaLista[i + 1] + '<br>';
+    }
+
+   }
 }
 
 function reiniciar() {
