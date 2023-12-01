@@ -3,6 +3,15 @@ let amigosNaLista = [];
 function adicionar() {
     //receber nome dos amigos através do Campo Nome do amigo
     let nomeDoAmigo = document.getElementById('nome-amigo');
+    // VALIDANDO nome do amigo
+    if (nomeDoAmigo.value == '') {
+        alert('Insira o nome do amigo');
+        return;
+    }
+    
+    //VALIDANDO mesmo amigo já adicionado
+    
+
     //receber a lista dos amigos
     let listaDosAmigos = document.getElementById('lista-amigos');
     //colocar o nome dos amigos em uma lista
@@ -18,6 +27,12 @@ function adicionar() {
 }
 
 function sortear() {
+    //VALIDANDO número de participantes
+    if (amigosNaLista.length < 4) {
+        alert('Insira no mínimo 4 amigos!');
+        return;
+    }
+
     embaralha(amigosNaLista);
 
     let sorteio = document.getElementById('lista-sorteio');
