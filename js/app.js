@@ -1,8 +1,10 @@
 let amigosNaLista = [];
 
 function adicionar() {
+
     //receber nome dos amigos através do Campo Nome do amigo
     let nomeDoAmigo = document.getElementById('nome-amigo');
+
     // VALIDANDO nome do amigo
     if (nomeDoAmigo.value == '') {
         alert('Insira o nome do amigo');
@@ -15,10 +17,16 @@ function adicionar() {
         return;
     }
 
+
     //receber a lista dos amigos
     let listaDosAmigos = document.getElementById('lista-amigos');
+
+    //Deixando nome em Maiúsculo antes de adicionar no array
+    
+
     //colocar o nome dos amigos em uma lista
-    amigosNaLista.push(nomeDoAmigo.value); // vai adicionar o nome dos amigos dentro do array []
+    // vai adicionar o nome dos amigos dentro do array []
+     amigosNaLista.push(nomeDoAmigo.value);
 
     if (listaDosAmigos.textContent == '') {
         listaDosAmigos.textContent = nomeDoAmigo.value;
