@@ -10,7 +10,10 @@ function adicionar() {
     }
     
     //VALIDANDO mesmo amigo já adicionado
-    
+    if (amigosNaLista.includes(nomeDoAmigo.value)) {
+        alert('Amigo já adicionado, insira outro amigo');
+        return;
+    }
 
     //receber a lista dos amigos
     let listaDosAmigos = document.getElementById('lista-amigos');
